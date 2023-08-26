@@ -12,14 +12,14 @@ export interface NavItem {
     },
     {
       label: "Life",
-      href: "/roomtour",
+      href: "/life",
     },
     {
       label: "Projects",
-      href: "/roomtour",
+      href: "/projects",
     },
     {
       label: "Podcast",
-      href: "/roomtour",
+      href: "/podcast",
     },
   ];

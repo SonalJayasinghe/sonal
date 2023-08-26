@@ -18,7 +18,7 @@ function PageNotFound() {
     <GridItem>
       <NavBar></NavBar>
     </GridItem>
-    <GridItem>
+    <GridItem marginTop={"30vh"}>
       <NotFound404/>
     </GridItem>
   </Grid>
