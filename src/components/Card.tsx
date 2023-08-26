@@ -11,34 +11,45 @@ import {
 } from "@chakra-ui/react";
 import { IconType } from "react-icons";
 import { LiaBirthdayCakeSolid } from "react-icons/lia";
+import { PiStudentFill } from "react-icons/pi";
+import { GiHastyGrave } from "react-icons/gi";
+import {MdOutlineFiberNew, MdComputer} from "react-icons/md"
+
+import { LIFE_ITEM } from "../data/LifeItem";
 
 function Card() {
   const iconMap: { [key: string]: IconType } = {
     birthday: LiaBirthdayCakeSolid,
+    student: PiStudentFill,
+    business: MdComputer,
+    grave: GiHastyGrave,
+    new: MdOutlineFiberNew,
   };
 
   return (
     <Center>
       <Flex gap={4} flexWrap={"wrap"}>
+        {LIFE_ITEM.map((item, index) => ( 
         <Box
           borderColor={"black"}
           borderWidth={1}
           borderRadius={10}
           padding={4}
-          width={350}
+          width={{base:"350px",md:"45%", lg:"32%"}}
+          key={index}
         >
           <HStack spacing={5} overflowWrap={"break-word"}>
             <StackItem>
               <VStack>
                 <StackItem>
                   <Icon
-                    as={iconMap["birthday"]}
+                    as={iconMap[item.icon]}
                     boxSize={55}
                     marginBottom={-2}
                   />
                 </StackItem>
                 <StackItem>
-                  <Text> 2001 </Text>
+                  <Text> {item.year} </Text>
                 </StackItem>
                 <StackItem>
                   <Box
@@ -48,24 +59,23 @@ function Card() {
                     padding={1}
                     borderRadius={4}
                   >
-                    Failed
+                    {item.status}
                   </Box>
                 </StackItem>
               </VStack>
             </StackItem>
             <Box>
               <Heading as={"h2"} fontSize={"2xl"}>
-                {" "}
-                Born{" "}
+                {item.title}
               </Heading>
               <Text>
                 {" "}
-                Born in 25<sup>th</sup> of February 2001 in Colombo, Sri Lanka.{" "}
+               {item.discription}
               </Text>
             </Box>
           </HStack>
         </Box>
-
+))}
         
       </Flex>
     </Center>
