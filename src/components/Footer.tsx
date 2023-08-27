@@ -58,11 +58,7 @@ const ListHeader = ({ children }: { children: ReactNode }) => {
 
 export default function LargeWithNewsletter() {
   return (
-    <Box
-      bg={"black"}
-      color={"white"}
-      marginTop={8}
-    >
+    <Box bg={"black"} color={"white"} marginTop={8}>
       <Container as={Stack} maxW={"6xl"} py={5}>
         <SimpleGrid
           templateColumns={{ sm: "1fr 1fr 1fr 1fr", md: "1fr 1fr 1fr 1fr" }}
@@ -70,9 +66,15 @@ export default function LargeWithNewsletter() {
         >
           <Stack spacing={3} justify={"center"}>
             <Box>
-              <Image style={{filter:"invert()"}} src={"src/assets/logo.png"} width={"150px"} />
+              <Image
+                style={{ filter: "invert()" }}
+                src={"src/assets/logo.png"}
+                width={"150px"}
+              />
             </Box>
-            <Text ml={5} fontSize={"sm"}>Illumina Vita Tua </Text>
+            <Text ml={5} fontSize={"sm"}>
+              Illumina Vita Tua{" "}
+            </Text>
             <Stack direction={"row"} spacing={6}>
               <SocialButton label={"Facebook"} href={""}>
                 <FaFacebook />
@@ -88,33 +90,36 @@ export default function LargeWithNewsletter() {
           <Stack align={"flex-start"}>
             <ListHeader>Site Map</ListHeader>
             {NAV_ITEMS.map((item, index) => (
-              <Box key={index} as="a" href={"#" + item.href} scrollBehavior={"smooth"}>
+              <Box
+                key={index}
+                as="a"
+                href={"#" + item.href}
+                scrollBehavior={"smooth"}
+              >
                 {item.label}
               </Box>
             ))}
           </Stack>
           <Stack align={"flex-start"}>
-            <ListHeader>Legal</ListHeader>
-            <Box as="a" href={"#/terms"}>
-              Terms and Conditions
-            </Box>
-            <Box as="a" href={"#/privacy"}>
-              Privacy Policy
-            </Box>
+            <ListHeader>Mini Games</ListHeader>
+            
           </Stack>
 
           <Stack align={"flex-start"}>
             <ListHeader>Podcasts</ListHeader>
             <Box>
-              Dark Room Podcast
+              <a
+                href="https://podcasters.spotify.com/pod/show/dark-room"
+                target="_blank"
+              >
+                {" "}
+                Dark Room Podcast{" "}
+              </a>
               <br />
-              The Second
-              <br />
-  
             </Box>
           </Stack>
         </SimpleGrid>
-        <Divider orientation="horizontal" borderColor="gray.700"/>
+        <Divider orientation="horizontal" borderColor="gray.700" />
 
         <Center margin={1} color={"gray.400"}>
           <a

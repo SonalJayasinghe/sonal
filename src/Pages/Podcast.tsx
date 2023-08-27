@@ -22,7 +22,7 @@ function Podcast() {
             <NavBar pgNo={pgNo} />
           </Box>
 
-          <Box w="100%" marginTop={"10px"}>
+          <Box w="100%" marginTop={"-60px"}>
             <Box textAlign="center" py={10} px={6}>
               <iframe
                 width="100%"
