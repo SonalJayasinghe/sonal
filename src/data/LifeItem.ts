@@ -20,7 +20,7 @@ export interface LifeItem {
         discription:"Worked as a graphic designer at my own graphic design business - TALEX",
         icon:"business",
         year: "2016 - 2021",
-        status: "Failed",
+        status: "Completed",
     },
 
     {

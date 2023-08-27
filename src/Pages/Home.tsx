@@ -1,7 +1,8 @@
-import { Box, Flex, VStack } from "@chakra-ui/react";
+import { Box, Center, Flex, HStack, Heading, Image, Text, VStack } from "@chakra-ui/react";
 import NavBar from "../components/NavBar/navbar";
 import { useEffect, useLayoutEffect } from "react";
 import Footer from "../components/Footer";
+import InfoMe from "../components/InfoMe";
 
 function Home() {
   const pgNo = 0;
@@ -22,8 +23,9 @@ function Home() {
             <NavBar pgNo={pgNo} />
           </Box>
 
-          <Box w="100%" marginTop={"95px"}>
-            ggvgvhv
+          <Box w="90%" marginTop={"95px"}>
+            
+            <InfoMe/>
           </Box>
 
           <Box w="100%" marginTop={"auto"}>
