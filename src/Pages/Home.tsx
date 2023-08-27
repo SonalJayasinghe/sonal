@@ -1,4 +1,4 @@
-import { Box, Center, Flex, HStack, Heading, Image, Text, VStack } from "@chakra-ui/react";
+import { Box, Flex, VStack } from "@chakra-ui/react";
 import NavBar from "../components/NavBar/navbar";
 import { useEffect, useLayoutEffect } from "react";
 import Footer from "../components/Footer";

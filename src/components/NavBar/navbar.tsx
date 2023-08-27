@@ -31,11 +31,7 @@ export default function WithSubnavigation({ pgNo }: Props) {
         minH={"60px"}
         py={{ base: 2 }}
         px={{ base: 4 }}
-        borderBottom={1}
-        borderStyle={"solid"}
-        borderColor={"white"}
         align={"center"}
-        shadow={"sm"}
       >
         <Flex
           flex={{ base: 1, md: "auto" }}

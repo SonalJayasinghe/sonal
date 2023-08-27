@@ -22,24 +22,13 @@ function Podcast() {
             <NavBar pgNo={pgNo} />
           </Box>
 
-          <Box w="100%" marginTop={"95px"}>
-          <Box textAlign="center" py={10} px={6}>
-              <Heading
-                display="inline-block"
-                as="h2"
-                size="2xl"
-                bg={"black"}
-                backgroundClip="text"
-              >
-                Ooops...
-              </Heading>
-              <Text fontSize="18px" mt={3} mb={2}>
-                We will build this soon
-              </Text>
-              <Text color={"gray.500"} mb={6}>
-                The page you&apos;re looking for does not seem to exist. Please
-                go back to the home.
-              </Text>
+          <Box w="100%" marginTop={"10px"}>
+            <Box textAlign="center" py={10} px={6}>
+              <iframe
+                width="100%"
+                height={"590vh"}
+                src="https://podcasters.spotify.com/pod/show/dark-room"
+              ></iframe>
             </Box>
           </Box>
 
