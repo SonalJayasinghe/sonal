@@ -8,7 +8,7 @@ function Life() {
   const pgNo = 1;
 
   useEffect(() => {
-    document.title = "Welcome to Marinara Hotel";
+    document.title = "My Life";
   }, []);
 
   useLayoutEffect(() => {
