@@ -1,4 +1,4 @@
-import { Box, Button, Center, Flex, Heading, Stack, StackItem, Text } from "@chakra-ui/react";
+import { Box, Center, Flex, Heading, Stack, StackItem, Text } from "@chakra-ui/react";
 
 import Carousel from "./Carousel";
 import { PROJECT_ITEM } from "../data/ProjectItem";
