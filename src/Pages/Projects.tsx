@@ -1,7 +1,8 @@
-import { Box, Flex, Heading, VStack , Text} from "@chakra-ui/react";
+import { Box, Flex, VStack} from "@chakra-ui/react";
 import NavBar from "../components/NavBar/navbar";
 import { useEffect, useLayoutEffect } from "react";
 import Footer from "../components/Footer";
+import ProjectCard from "../components/ProjectCard";
 
 function Projects() {
   const pgNo = 2;
@@ -14,6 +15,10 @@ function Projects() {
     window.scrollTo(0, 0);
   }, []);
 
+  const cards = [
+    'https://images.unsplash.com/photo-1612852098516-55d01c75769a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
+  ]
+
   return (
     <>
       <Flex minH={"100vh"}>
@@ -22,25 +27,8 @@ function Projects() {
             <NavBar pgNo={pgNo} />
           </Box>
 
-          <Box w="100%" marginTop={"95px"}>
-            <Box textAlign="center" py={10} px={6}>
-              <Heading
-                display="inline-block"
-                as="h2"
-                size="2xl"
-                bg={"black"}
-                backgroundClip="text"
-              >
-                Ooops...
-              </Heading>
-              <Text fontSize="18px" mt={3} mb={2}>
-                We will build this soon
-              </Text>
-              <Text color={"gray.500"} mb={6}>
-                The page you&apos;re looking for does not seem to exist. Please
-                go back to the home.
-              </Text>
-            </Box>
+          <Box w="90%" marginTop={"95px"}>
+            <ProjectCard/>
           </Box>
 
           <Box w="100%" marginTop={"auto"}>
