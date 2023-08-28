@@ -8,7 +8,7 @@ function Home() {
   const pgNo = 0;
 
   useEffect(() => {
-    document.title = "Welcome to Sonal.lk";
+    document.title = "Welcome";
   }, []);
 
   useLayoutEffect(() => {
