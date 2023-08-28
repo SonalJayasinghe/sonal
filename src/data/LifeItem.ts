@@ -27,7 +27,7 @@ export interface LifeItem {
         title: "Undergraduate",
         discription:"Selected to University of Sri Jayewardenepura as an ICT Student",
         icon:"student",
-        year: "2021 - 2025",
+        year: "2022 - 2025",
         status: "Pending",
     },
 
