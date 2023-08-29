@@ -12,7 +12,7 @@ function InfoMe() {
           >
             <Box>
               <Image
-                src="src/assets/sonal.jpg"
+                src="./assets/sonal.jpg"
                 minW={350}
                 maxW={350}
                 borderRadius={25}

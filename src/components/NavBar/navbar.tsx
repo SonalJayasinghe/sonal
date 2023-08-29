@@ -50,7 +50,7 @@ export default function WithSubnavigation({ pgNo }: Props) {
         </Flex>
 
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <Image style={{filter: "invert()"}} src={"src/assets/logo.png"} w={"125px"} />
+          <Image style={{filter: "invert()"}} src={"./assets/logo.png"} w={"125px"} />
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <Square>
               <DesktopNav pgNo={pgNo} />

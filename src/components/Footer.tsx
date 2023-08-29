@@ -68,7 +68,7 @@ export default function LargeWithNewsletter() {
             <Box>
               <Image
                 style={{ filter: "invert()" }}
-                src={"src/assets/logo.png"}
+                src={"./assets/logo.png"}
                 width={"150px"}
               />
             </Box>
