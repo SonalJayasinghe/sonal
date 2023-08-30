@@ -12,9 +12,10 @@ import Podcast from "./Pages/Podcast.tsx";
 
 
 const router = createHashRouter([
+
   {
     path: "/",
-    element: <Home />,
+    element: <Home />,    
   },
   {
     path: "/life",
@@ -34,6 +35,7 @@ const router = createHashRouter([
     path: "*",
     element: <PageNotFound />,
   },
+
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

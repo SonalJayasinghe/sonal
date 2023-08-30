@@ -93,7 +93,7 @@ export default function LargeWithNewsletter() {
               <Box
                 key={index}
                 as="a"
-                href={"#" + item.href}
+                href={'#' + item.href}
                 scrollBehavior={"smooth"}
               >
                 {item.label}
