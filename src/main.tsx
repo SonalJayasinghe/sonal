@@ -38,6 +38,8 @@ const router = createHashRouter([
 
 ]);
 
+localStorage.setItem('chakra-ui-color-mode', "light");
+
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
