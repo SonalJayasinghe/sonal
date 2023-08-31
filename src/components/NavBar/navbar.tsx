@@ -32,6 +32,7 @@ export default function WithSubnavigation({ pgNo }: Props) {
         py={{ base: 2 }}
         px={{ base: 4 }}
         align={"center"}
+        shadow={"md"}
       >
         <Flex
           flex={{ base: 1, md: "auto" }}

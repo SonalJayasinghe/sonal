@@ -1,4 +1,4 @@
-import { Box, Flex, VStack} from "@chakra-ui/react";
+import { Box, Flex, Heading, VStack} from "@chakra-ui/react";
 import NavBar from "../components/NavBar/navbar";
 import { useEffect, useLayoutEffect } from "react";
 import Footer from "../components/Footer";
@@ -23,8 +23,10 @@ function Projects() {
           <Box w="100%" position={"fixed"} zIndex={2}>
             <NavBar pgNo={pgNo} />
           </Box>
-
-          <Box w="90%" marginTop={"95px"}>
+          <Box w="90%" marginTop={"95px"} padding={3}>
+           <Heading textAlign={"center"} as={"h2"} fontSize={"2xl"}> These are my projects... </Heading>
+          </Box>
+          <Box w="90%" marginTop={"15px"}>
             <ProjectCard/>
           </Box>
 
