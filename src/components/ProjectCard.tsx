@@ -38,6 +38,12 @@ function ProjectCard() {
               key={index}
               w={{ base: "100%", md: "50%" }}
               h={"max-content"}
+              _hover={{
+                transform: "scale(1.008)",
+                transition: "transform .2s",
+                transitionTimingFunction: "ease-in-out",
+                shadow: "md",
+              }}
             >
               <Stack>
                 <StackItem>

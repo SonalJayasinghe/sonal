@@ -37,6 +37,12 @@ function Card() {
           padding={4}
           width={{base:"350px",md:"45%", lg:"32%"}}
           key={index}
+          _hover={{
+            transform: "scale(1.008)",
+            transition: "transform .2s",
+            transitionTimingFunction: "ease-in-out",
+            shadow: "md",
+          }}
         >
           <HStack spacing={5} overflowWrap={"break-word"}>
             <StackItem>

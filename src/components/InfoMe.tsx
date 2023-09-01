@@ -23,8 +23,7 @@ function InfoMe() {
           >
             <Box>
               {!isLoaded && (
-                
-                  <Skeleton minW={350} maxW={350} h={420} borderRadius={35}/>
+                <Skeleton minW={350} maxW={350} h={420} borderRadius={35} />
               )}
               <Image
                 minW={350}
@@ -32,8 +31,13 @@ function InfoMe() {
                 src="./assets/sonal.jpg"
                 borderRadius={35}
                 onLoad={() => setLoaded(true)}
+                _hover={{
+                  transform: "scale(1.01)",
+                  transition: "transform .2s",
+                  transitionTimingFunction: "ease-in-out",
+                  shadow: "md",
+                }}
               />
-
             </Box>
 
             <Box>
