@@ -1,16 +1,15 @@
-import React from "react";
-import { Box, Button } from "@chakra-ui/react";
+import React, { useState } from "react";
+import { Box, Button, Image, Skeleton } from "@chakra-ui/react";
 // Here we have used react-icons package for the icons
 // And react-slick as our Carousel Lib
 import Slider from "react-slick";
+import {FiExternalLink} from "react-icons/fi"
 
 // Settings for the slider
 const settings = {
-  dots: true,
   arrows: false,
   fade: true,
   infinite: true,
-  autoplay: true,
   speed: 500,
   autoplaySpeed: 5000,
   slidesToShow: 1,
@@ -26,6 +25,7 @@ export default function Carousel({ imgURL, link }: Props) {
   // As we have used custom buttons, we need a reference variable to
   // change the state
   const [, setSlider] = React.useState<Slider | null>(null);
+  const [isLoaded, setLoaded] = useState(false);
 
   // These are the images used in the slide
 
@@ -43,28 +43,42 @@ export default function Carousel({ imgURL, link }: Props) {
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
       />
       <Box>
-        <Slider {...settings} ref={(slider) => setSlider(slider)}>
+        <Slider {...settings} ref={(slider) => setSlider(slider)} dots = {isLoaded} autoplay={isLoaded}>
+          {!isLoaded && (
+            <Skeleton
+              w={"100%"}
+              h={{ base: "max-conent", md: "350px" }}
+              borderRadius={35}
+            />
+          )}
           {imgURL.map((url, index) => (
-            <Box
+            <Image
               key={index}
-              h={"300px"}
+              h={{ base: "max-conent", md: "350px" }}
               backgroundPosition="center"
               backgroundRepeat="no-repeat"
               backgroundSize="cover"
-              backgroundImage={`url(${url})`}
-              borderRadius={15}
+              src={url}
+              onLoad={() => {
+                if (index === imgURL.length - 1) {
+                  setLoaded(true);
+                }
+              }}
+              borderRadius={30}
             />
           ))}
         </Slider>
+
         {link && (
           <Button
             as="a"
             bgColor={"black"}
             color={"white"}
             float={"right"}
-            top={-20}
-            right={10}
-            borderRadius={8}
+            bottom={16}
+            leftIcon={<FiExternalLink/>}
+            right={8}
+            borderRadius={50}
             _hover={{ bgColor: "gray.800" }}
             href={link}
             target={"_blank"}
