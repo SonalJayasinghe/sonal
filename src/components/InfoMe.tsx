@@ -31,6 +31,7 @@ function InfoMe() {
                 src="./assets/sonal.jpg"
                 borderRadius={35}
                 onLoad={() => setLoaded(true)}
+                visibility={isLoaded ? "visible" : "hidden"}
                 _hover={{
                   transform: "scale(1.01)",
                   transition: "transform .2s",

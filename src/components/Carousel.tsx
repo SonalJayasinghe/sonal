@@ -47,7 +47,7 @@ export default function Carousel({ imgURL, link }: Props) {
           {!isLoaded && (
             <Skeleton
               w={"100%"}
-              h={{ base: "max-conent", md: "350px" }}
+              h={{ base: "300px", md: "350px" }}
               borderRadius={35}
             />
           )}
