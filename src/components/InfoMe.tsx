@@ -8,6 +8,7 @@ import {
   Skeleton,
 } from "@chakra-ui/react";
 import { useState } from "react";
+import img from '../assets/sonal.jpg';
 
 function InfoMe() {
   const [isLoaded, setLoaded] = useState(false);
@@ -28,7 +29,7 @@ function InfoMe() {
               <Image
                 minW={350}
                 maxW={350}
-                src="./assets/sonal.jpg"
+                src={img}
                 borderRadius={35}
                 onLoad={() => setLoaded(true)}
                 visibility={isLoaded ? "visible" : "hidden"}

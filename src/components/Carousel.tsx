@@ -35,7 +35,7 @@ export default function Carousel({ imgURL, link }: Props) {
       <link
         rel="stylesheet"
         type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+        href= "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
       />
       <link
         rel="stylesheet"
@@ -58,7 +58,7 @@ export default function Carousel({ imgURL, link }: Props) {
               backgroundPosition="center"
               backgroundRepeat="no-repeat"
               backgroundSize="cover"
-              src={url}
+              src= {url}
               onLoad={() => {
                 if (index === imgURL.length - 1) {
                   setLoaded(true);

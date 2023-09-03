@@ -13,7 +13,7 @@ import {
 import { ReactNode } from "react";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { NAV_ITEMS } from "../data/NavItem";
-
+import logo from '../assets/logo.png';
 const SocialButton = ({
   children,
   label,
@@ -66,7 +66,7 @@ export default function LargeWithNewsletter() {
             <Box>
               <Image
                 style={{ filter: "invert()" }}
-                src={"./assets/logo.png"}
+                src={logo}
                 width={"150px"}
               />
             </Box>

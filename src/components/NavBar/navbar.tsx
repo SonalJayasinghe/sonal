@@ -16,11 +16,13 @@ import { HamburgerIcon, CloseIcon,MinusIcon } from "@chakra-ui/icons";
 import { NAV_ITEMS } from "../../data/NavItem";
 import { MobileNavItem } from "./mobNavBar";
 import { Link } from "react-router-dom";
+import img from '../../assets/logo.png';
 
 interface Props {
   pgNo?: number;
 }
-export default function WithSubnavigation({ pgNo }: Props) {
+
+function WithSubnavigation({ pgNo }: Props) {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
@@ -51,7 +53,7 @@ export default function WithSubnavigation({ pgNo }: Props) {
         </Flex>
 
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <Image style={{filter: "invert()"}} src={"./assets/logo.png"} w={"125px"} />
+          <Image style={{filter: "invert()"}} src={img} w={"125px"} />
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <Square>
               <DesktopNav pgNo={pgNo} />
@@ -98,7 +100,6 @@ const DesktopNav = ({ pgNo }: Props) => {
                 <Link
                   id={navItem.label}
                   to={navItem.href}
-                  onClick={() => console.log("Hi")}
                 >
                   <VStack>
                   <b color="white">{navItem.label}</b>
@@ -137,3 +138,5 @@ const MobileNav = () => {
     </Stack>
   );
 };
+
+export default WithSubnavigation;
